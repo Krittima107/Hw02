@@ -101,10 +101,6 @@ if ($bmi < 18.50) {
             </span>
         </p>
         <p><strong>คำแนะนำ:</strong> <?php echo $advice; ?></p>
-
-        <hr>
-
-        <a href="index.php" class="btn-home">กลับหน้าหลัก</a>
     </div>
 
 </body>

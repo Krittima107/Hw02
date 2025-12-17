@@ -48,27 +48,28 @@
 <body>
 
     <div class="container">
-        <h2>ประมวลผลดัชนีมวลกาย</h2>
-        <form action="result.php" method="POST">
-            <label>ชื่อ-นามสกุล:</label>
-            <input type="text" name="fullname" required>
+        <center>
+            <h2>ประมวลผลดัชนีมวลกาย</h2>
+            <form action="result.php" method="POST">
+                <label>ชื่อ-นามสกุล:</label>
+                <input type="text" name="fullname" required>
 
-            <label>วันเกิด:</label>
-            <input type="date" name="birthdate" required>
+                <label>วันเกิด:</label>
+                <input type="date" name="birthdate" required>
 
-            <label>น้ำหนัก (กก.):</label>
-            <input type="number" step="0.01" name="weight" required>
+                <label>น้ำหนัก (กก.):</label>
+                <input type="number" step="0.01" name="weight" required>
 
-            <label>ส่วนสูง (ซม.):</label>
-            <input type="number" step="0.01" name="height" required>
+                <label>ส่วนสูง (ซม.):</label>
+                <input type="number" step="0.01" name="height" required>
 
-            <div class="btn-group">
-                <button type="submit">Submit</button>
-                <button type="reset">Clear</button>
-            </div>
-        </form>
+                <div class="btn-group">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
     </div>
-
+    </center>
 </body>
 
 </html>

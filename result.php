@@ -66,14 +66,14 @@ if ($bmi < 18.50) {
 
         .btn-home {
             display: block;
-            width: 100%;
+            width: 80%;
             padding: 10px;
             margin-top: 20px;
             text-align: center;
             background-color: #f0f0f0;
             text-decoration: none;
             color: black;
-            border: 1px solid #ccc;
+            border: 1px solid #000000ff;
         }
 
         hr {
@@ -83,26 +83,30 @@ if ($bmi < 18.50) {
 </head>
 
 <body>
+    <center>
+        <div class="container">
+            <h3>ผลการวิเคราะห์สุขภาพ</h3>
+            <p><strong>ชื่อ-นามสกุล:</strong> <?php echo $fullname; ?></p>
+            <p><strong>วันเกิด:</strong> <?php echo $birthdate; ?></p>
+            <p><strong>อายุ:</strong> <?php echo $age_text; ?></p>
+            <p><strong>น้ำหนัก:</strong> <?php echo $weight; ?> กก.</p>
+            <p><strong>ส่วนสูง:</strong> <?php echo $height; ?> ซม.</p>
 
-    <div class="container">
-        <h3>ผลการวิเคราะห์สุขภาพ</h3>
-        <p><strong>ชื่อ-นามสกุล:</strong> <?php echo $fullname; ?></p>
-        <p><strong>วันเกิด:</strong> <?php echo $birthdate; ?></p>
-        <p><strong>อายุ:</strong> <?php echo $age_text; ?></p>
-        <p><strong>น้ำหนัก:</strong> <?php echo $weight; ?> กก.</p>
-        <p><strong>ส่วนสูง:</strong> <?php echo $height; ?> ซม.</p>
+            <hr>
 
-        <hr>
+            <p><strong>ค่า BMI:</strong> <?php echo $bmi_show; ?></p>
+            <p><strong>แปลผลค่า BMI:</strong>
+                <span style="color:<?php echo ($bmi >= 18.5 && $bmi < 23) ? 'green' : 'red'; ?>; font-weight:bold;">
+                    <?php echo $result_text; ?>
+                </span>
+            </p>
+            <p><strong>คำแนะนำ:</strong> <?php echo $advice; ?></p>
 
-        <p><strong>ค่า BMI:</strong> <?php echo $bmi_show; ?></p>
-        <p><strong>แปลผลค่า BMI:</strong>
-            <span style="color:<?php echo ($bmi >= 18.5 && $bmi < 23) ? 'green' : 'red'; ?>; font-weight:bold;">
-                <?php echo $result_text; ?>
-            </span>
-        </p>
-        <p><strong>คำแนะนำ:</strong> <?php echo $advice; ?></p>
-    </div>
+            <hr>
 
+            <a href="input.php" class="btn-home">กลับหน้าหลัก</a>
+        </div>
+    </center>
 </body>
 
 </html>
